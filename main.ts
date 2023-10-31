@@ -5,8 +5,9 @@
  * This program counts down in a loop and lights up neopixels that correspond to the number that is shown on the Microbit
 */
 
-// variables 
+// variables
 let neopixelStrip: neopixel.Strip = null
+let loopCounter: number
 
 // setup
 basic.clearScreen()
@@ -18,7 +19,7 @@ neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
 
-input.onButtonPressed(Button.A, function() {
+input.onButtonPressed(Button.A, function () {
   while (true) {
 
     // number 4 and 4 neopixels
