@@ -19,11 +19,14 @@ neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
 
-input.onButtonPressed(Button.A, function () {
-  while (true) {
+// loopCounter
+loopCounter = 8
 
+input.onButtonPressed(Button.A, function () {
+  while (loopCounter > 4)
     // number 4 and 4 neopixels
-    basic.showNumber(4)
+    loopCounter = loopCounter - 1
+    basic.showNumber(loopCounter)
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Blue))
     neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Blue))
     neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Blue))
@@ -32,7 +35,8 @@ input.onButtonPressed(Button.A, function () {
     basic.pause(500)
 
     // number 3 and 3 neopixels
-    basic.showNumber(3)
+    loopCounter = loopCounter - 1
+    basic.showNumber(loopCounter)
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
     neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Blue))
     neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Blue))
@@ -41,23 +45,24 @@ input.onButtonPressed(Button.A, function () {
     basic.pause(500)
 
     // number 2 and 2 neopixels
-    basic.showNumber(2)
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
+    loopCounter = loopCounter - 1
+    basic.showNumber(loopCounter)
     neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
     neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Blue))
     neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Blue))
     neopixelStrip.show()
+    basic.pause(500)
 
     // number 1 and 1 neopixels
-    basic.showNumber(1)
-    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
-    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
+    loopCounter = loopCounter - 1
+    basic.showNumber(loopCounter)
     neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
     neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Blue))
     neopixelStrip.show()
     basic.pause(500)
 
     // no neopixels and #0
+    loopCounter = loopCounter - 1
     basic.showNumber(0)
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
     neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
@@ -66,4 +71,4 @@ input.onButtonPressed(Button.A, function () {
     neopixelStrip.show()
     basic.pause(500)
     }
-})
+)
