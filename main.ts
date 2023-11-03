@@ -1,6 +1,6 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: Angelo
+ * Created by: Angelo Yalung
  * Created on: Oct 2023
  * This program counts down in a loop and lights up neopixels that correspond to the number that is shown on the Microbit
 */
@@ -25,11 +25,12 @@ input.onButtonPressed(Button.A, function () {
   neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Blue))
   neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Blue))
   neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Blue))
+
   // the actual loop
   while (loopcounter >= 0) {
     basic.pause(500)
     basic.showNumber(loopcounter)
-    neopixelStrip.setPixelColor((3 - loopcounter), neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.setPixelColor(loopcounter, neopixel.colors(NeoPixelColors.Black))
     neopixelStrip.show()
     loopcounter = loopcounter - 1
   }
