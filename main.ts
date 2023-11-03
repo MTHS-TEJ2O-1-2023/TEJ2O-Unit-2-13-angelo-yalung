@@ -20,10 +20,12 @@ neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
 
 input.onButtonPressed(Button.A, function () {
-  neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
-  neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
-  neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Red))
-  neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Red))
+  // colors
+  neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Blue))
+  neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Blue))
+  neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Blue))
+  neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Blue))
+  // the actual loop
   while (loopcounter >= 0) {
     basic.pause(500)
     basic.showNumber(loopcounter)
@@ -31,5 +33,4 @@ input.onButtonPressed(Button.A, function () {
     neopixelStrip.show()
     loopcounter = loopcounter - 1
   }
-
 })
