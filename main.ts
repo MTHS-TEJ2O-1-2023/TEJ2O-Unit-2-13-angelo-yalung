@@ -20,7 +20,7 @@ neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
 
 input.onButtonPressed(Button.A, function () {
-  // colors
+  // colors that will be used
   neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Blue))
   neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Blue))
   neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Blue))
