@@ -7,7 +7,7 @@
 
 // variables
 let neopixelStrip: neopixel.Strip = null
-let loopCounter: number
+let loopcounter = 4
 
 // setup
 basic.clearScreen()
@@ -20,17 +20,17 @@ neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
 
 input.onButtonPressed(Button.A, function () {
-  // loopCounter and setup
-  loopCounter = 4
-  basic.clearScreen()
-  neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Black))
-  neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
-  neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
-  neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
-
-  // 4 neo pixels
-  while (loopCounter >= 0)
-  basic.showNumber(loopCounter)
-  neopixelStrip.show()
-  pause(1000)
+  // colors
+  neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Blue))
+  neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Blue))
+  neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Blue))
+  neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Blue))
+  // the actual loop
+  while (loopcounter >= 0) {
+    basic.pause(500)
+    basic.showNumber(loopcounter)
+    neopixelStrip.setPixelColor((3 - loopcounter), neopixel.colors(NeoPixelColors.Black))
+    neopixelStrip.show()
+    loopcounter = loopcounter - 1
+  }
 })
