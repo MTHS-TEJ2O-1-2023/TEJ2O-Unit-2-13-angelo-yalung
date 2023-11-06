@@ -1,7 +1,7 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
  * Created by: Angelo Yalung
- * Created on: Oct 2023
+ * Created on: Nov 2023
  * This program counts down in a loop and lights up neopixels that correspond to the number that is shown on the Microbit
 */
 
