@@ -34,6 +34,6 @@ input.onButtonPressed(Button.A, function () {
     neopixelStrip.setPixelColor(loopcounter, neopixel.colors(NeoPixelColors.Black))
     neopixelStrip.show()
     loopcounter = loopcounter - 1
-    basic.showIcon(IconNames.Happy)
   }
+  basic.showIcon(IconNames.Happy)
 })
