@@ -25,8 +25,9 @@ input.onButtonPressed(Button.A, function () {
   neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Blue))
   neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Blue))
   neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Blue))
-
-  // the loop
+  
+  // loopcounter
+  loopcounter = 4
   while (loopcounter >= 0) {
     basic.pause(500)
     basic.showNumber(loopcounter)
