@@ -31,4 +31,3 @@ if button_a.is_pressed():
         np.show()
         sleep(500)
         loopcounter = loopcounter - 1
-        np[loopcounter] = (0, 0, 0)
